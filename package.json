@@ -1,0 +1,49 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vite build && vite preview",
+    "dev": "vite",
+    "build": "vite build",
+    "build2": "react-scripts build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "@microsoft/omnichannel-chat-sdk": "^1.4.7-main.8e2093b",
+    "@microsoft/omnichannel-chat-widget": "^1.2.3-main.e804943",
+    "http-proxy": "^1.18.1",
+    "http-server": "^14.1.1",
+    "mkcert": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "react-scripts": "^5.0.1",
+    "swiper": "^10.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.48.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.9"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

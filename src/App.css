@@ -1,0 +1,32 @@
+button[aria-label="Submit"] {
+    background: linear-gradient(90deg,#A087BE,#754AA4) 
+  }  
+  
+  @font-face {
+    font-family: "ADPortsGroup";
+    src: local("ADPortsGroup"),
+     url("./fonts/ADPortsGroup/ADPortsGroup-Regular.otf") format("truetype");
+    font-weight: normal;
+   }
+
+   @font-face {
+    font-family: "ADPortsGroupLight";
+    src: local("ADPortsGroupLight"),
+     url("./fonts/ADPortsGroup/ADPortsGroup-Light.otf") format("truetype");
+    font-weight: lighter;
+   }
+
+   @font-face {
+    font-family: "ADPortsGroupBold";
+    src: local("ADPortsGroupBold"),
+     url("./fonts/ADPortsGroup/ADPortsGroup-Bold.otf") format("truetype");
+    font-weight: bold;
+   }
+
+   div.ac-textBlock {
+    font-family: ADPortsGroup !important;
+  }
+
+  .markdown.webchat--css-osocb-1297zfy {
+    font-family: ADPortsGroup !important;
+  }
