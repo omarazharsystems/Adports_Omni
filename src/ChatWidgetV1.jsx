@@ -1,3 +1,34 @@
+/**
+ * React component that renders a live chat widget.
+ * 
+ * Props:
+ * - isEng (boolean): Determines whether the chat widget should be rendered in English or not.
+ * - loggeinUserDetails (object): Contains the logged-in user's details, such as their first name, last name, phone number, and email address.
+ * 
+ * Example Usage:
+ * <ChatWidgetV1 isEng={true} loggeinUserDetails={userDetails} />
+ * 
+ * This component initializes the chat SDK, sets up the chat configuration, and handles various events and user interactions. It also includes customizations for the chat widget's appearance and behavior.
+ * 
+ * Flow:
+ * 1. Initializes state variables using the useState hook.
+ * 2. Calls the init function when the component mounts, which initializes the chat SDK and sets up the chat configuration.
+ * 3. Calls the RenderPreChatSurvey function to retrieve and render the pre-chat survey.
+ * 4. Determines the appropriate widget ID based on the isEng prop and whether the user is logged in or not.
+ * 5. Returns the chat configuration object.
+ * 6. Calls the init function with the appropriate language data (English or Arabic) to initialize the chat widget.
+ * 7. Calls the handleQuickButtonClicked function when the user clicks on the upload button, allowing them to select and upload a file attachment.
+ * 8. Creates a telemetry handler for logging chat events.
+ * 9. Creates a custom logger for logging chat events to the console.
+ * 10. Extracts the website URL and user details to be used as the initial custom context for the chat.
+ * 11. Renders the LiveChatWidget component with the appropriate props, including the chat SDK, chat configuration, and customizations for the chat widget's appearance and behavior.
+ * 
+ * Outputs:
+ * - Renders the live chat widget with the specified language and user details.
+ * - Allows users to interact with the chat interface, send messages, upload files, and receive responses from the chat agent.
+ * - Handles various events and user interactions, such as initializing the chat SDK, rendering the pre-chat survey, and logging telemetry events.
+ * - Can be customized with different styles, buttons, and behaviors based on the provided props and configuration.
+ */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-useless-escape */
@@ -88,7 +119,7 @@ const parseAdaptiveCardPayload = (payload, langData) => {
 
 // eslint-disable-next-line react/prop-types
 const ChatWidgetV1 = ({ isEng, loggeinUserDetails }) => {
-  console.log("loggeinUserDetailsloggeinUserDetails:", loggeinUserDetails);
+  // console.log("loggeinUserDetailsloggeinUserDetails:", loggeinUserDetails);
   const [liveChatWidgetProps, setLiveChatWidgetProps] = useState(null);
   const [ChatSkdCustom, setChatSkdCustom] = useState(null);
   const [langData, setLangData] = useState(null);
@@ -580,8 +611,8 @@ const ChatWidgetV1 = ({ isEng, loggeinUserDetails }) => {
                     background: UiData.chatButtonHoverBackground,
                   },
                   ":focus": {
-                    outline: undefined,
-                    // outline: "dotted 2px #000",
+                    // outline: undefined,
+                    outline: "solid 2px transparent",
                   },
                 },
                 minWidth: "0px",
